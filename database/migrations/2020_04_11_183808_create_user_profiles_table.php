@@ -17,9 +17,9 @@ class CreateUserProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
 
-            $table->integer('phone');
-            $table->integer('mobile_phone');
-            $table->integer('individual_legal_registration');
+            $table->bigInteger('phone');
+            $table->bigInteger('mobile_phone');
+            $table->bigInteger('individual_legal_registration');
             $table->integer('kind_person');
             $table->string('photo');
             $table->string('slug');
