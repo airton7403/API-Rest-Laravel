@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function user_profile()
+    public function profile()
     {
-        return $this->belongsTo(UserProfile::class);
+        return $this->hasOne(UserProfile::class);
     }
 }
