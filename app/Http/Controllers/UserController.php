@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $user = $this->user->with(['profile'])->paginate(10);
+        $user = $this->user->with(['profile', 'products'])->paginate(10);
 
         return response()->json($user, 200);
     }
