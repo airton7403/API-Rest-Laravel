@@ -21,7 +21,17 @@ class CreateUserProfilesTable extends Migration
             $table->bigInteger('mobile_phone');
             $table->bigInteger('individual_legal_registration');
             $table->integer('kind_person');
-            $table->string('photo');
+            $table->string('logo_photo')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('address');
+            $table->integer('address_number');
+            $table->string('address_complement')->nullable();
+            $table->string('state');
+            $table->string('city');
+            $table->string('neighborhood');
+            $table->integer('zipcode');
             $table->string('slug');
             $table->timestamps();
 
