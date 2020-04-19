@@ -17,9 +17,9 @@ class CreateUserProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
 
-            $table->bigInteger('phone');
-            $table->bigInteger('mobile_phone');
-            $table->bigInteger('individual_legal_registration');
+            $table->string('phone');
+            $table->string('mobile_phone');
+            $table->string('individual_legal_registration');
             $table->integer('kind_person');
             $table->string('logo_photo')->nullable();
             $table->string('facebook')->nullable();
@@ -31,7 +31,7 @@ class CreateUserProfilesTable extends Migration
             $table->string('state');
             $table->string('city');
             $table->string('neighborhood');
-            $table->integer('zipcode');
+            $table->string('postcode');
             $table->string('slug');
             $table->timestamps();
 

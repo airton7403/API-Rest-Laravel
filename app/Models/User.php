@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserProfile::class);
     }
+
+    public function immobiles()
+    {
+        return $this->hasMany(Immobile::class);
+    }
 }
